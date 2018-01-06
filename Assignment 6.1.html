@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Assignment 6.1</title>
+</head>
+<body>
+<p id="emp"></p>
+Enter employee salary:<input type="text" id="sal" value="value"><br>
+Enter working hours:<input type="text" id="hrs" value="value"><br>
+<button onclick="evaluateEmployee();">Evaluate employee salary</button><br><br>
+<div id="mydiv"></div>
+</body>
+
+<script type="text/javascript">
+
+
+	function evaluateEmployee(){											/*Evaluates employee salary as per working hours*/
+	    var salary = document.getElementById("sal").value;
+	    var revisedbasic=0;
+	    if (isNaN(salary)){
+	    	alert('Enter a number for salary please');
+	    }
+	    var hours = document.getElementById("hrs").value;
+	    if (isNaN(hours)){
+	    	alert('Enter a number for working hours please');
+	    }
+	    if(salary>=15000 && hours>10){
+	    	revisedbasic=(salary*10/100)+salary;
+	    }
+	    else
+	    {
+	    	revisedbasic=(salary*5/100)+salary;
+	    }
+		document.getElementById("mydiv").innerHTML="Basic is "+salary+" and revised basic is "+revisedbasic;
+	}
+	 					 
+</script>
+</html>
